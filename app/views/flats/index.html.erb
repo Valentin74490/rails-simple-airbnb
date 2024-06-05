@@ -1,0 +1,27 @@
+<div class="container mt-3">
+<h1>nos biens à louer</h1>
+<p>All <%= Flat.count%> flats </p>
+<div class="row">
+<% @flats.each do |flat| %>
+<div class="col-md-4">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <img src="https://source.unsplash.com/featured/300x201" class="flat-image" alt="">
+    <h4 class="card-title"><%= flat.name%></h4>
+    <p class="card-text"><%= flat.address%></p>
+    <div class="flex">
+    <div class="flex align-items-center">
+    <p class="card-text">Nombre de visiteurs <%= flat.number_of_guests%></p>
+     </div>
+         <div class="flex align-items-center ms-3">
+      <p class="card-text"> Prix de l'appart <%= flat.price_per_night%></p>
+      </div>
+    <a href="#" class="btn btn-primary">Je loue cet appart</a>
+
+    </div>
+  </div>
+</div>
+</div>
+<%end %>
+<%= link_to "créer un bien" new_flat_path %>
+</div>

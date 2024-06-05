@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+.flex {
+  display:flex;
+}
+
+.flex-align {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flat-image{
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+}
+
+
+
+.card {
+  margin: 2px 0 2px 0 ;
+  width: 100%;
+  position: relative;
+}
+
+.card-title {
+  font-size: 18px;
+}
